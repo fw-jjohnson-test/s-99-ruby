@@ -9,9 +9,9 @@ def reverse_list(ary, rev_ary)
 	return rev_ary if ary.empty?
 
 	head, *tail = ary
-	rev_ary << head unless tail.empty?
-
 	reverse_list(tail, rev_ary)
+
+	rev_ary << head
 end
 
 a = [1, 1, 2, 3, 5, 8]
