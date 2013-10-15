@@ -9,7 +9,6 @@
 ###############################################################################
 def compress(ary, acc = [], prev = nil)
 	head, *tail = ary
-	puts "head = #{head}, tail = #{tail}"
 	return acc if head.nil?
 
 	acc << head unless head == prev
@@ -19,5 +18,4 @@ def compress(ary, acc = [], prev = nil)
 end
 
 a = ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']
-result = compress(a)
-puts result
+puts = compress(a)
