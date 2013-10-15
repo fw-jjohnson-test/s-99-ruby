@@ -15,7 +15,7 @@ def pack(ary, acc = [], sub = [], prev = nil)
 		sub << head
 	else
 		sub = [ head ]
-		prev = head
+		#prev = head
 		acc << sub
 	end
 
