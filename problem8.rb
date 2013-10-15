@@ -17,4 +17,6 @@ def compress(ary, acc = [], prev = nil)
 end
 
 a = ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']
-puts compress(a)
+result = []
+puts compress(a, result)
+puts "#{result}"
