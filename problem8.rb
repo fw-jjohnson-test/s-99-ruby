@@ -12,10 +12,9 @@ def compress(ary, acc = [], prev = nil)
 	return acc if head.nil?
 
 	acc << head unless head == prev
-	prev = head
 
-	compress(tail, acc, prev)
+	compress(tail, acc, head)
 end
 
 a = ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']
-puts = compress(a)
+puts compress(a)
