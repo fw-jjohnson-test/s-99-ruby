@@ -10,7 +10,6 @@
 ###############################################################################
 require_relative 'problem3' # Find the Kth element of a list.
 require_relative 'problem4' # Find the number of elements of a list.
-require_relative 'problem9' # Pack consecutive duplicates of list elements into sublists.
 
 def encode(ary, acc = [])
 	head, *tail = ary
@@ -21,6 +20,7 @@ def encode(ary, acc = [])
 	encode(tail, acc)
 end
 
+# Result from problem 9
 a = [["a", "a", "a", "a"], ["b"], ["c", "c"], ["a", "a"], ["d"], ["e", "e", "e", "e"]]
 
 result = []
