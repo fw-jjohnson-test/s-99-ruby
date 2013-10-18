@@ -6,20 +6,18 @@
 # 	scala> pack(List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e))
 # 	res0: List[List[Symbol]] = List(List('a, 'a, 'a, 'a), List('b), List('c, 'c), List('a, 'a), List('d), List('e, 'e, 'e, 'e))
 ###############################################################################
-def pack(ary, acc = [], sub = [], prev = nil)
+def pack(ary, acc = [])
+	return acc if ary.empty?
+
 	head, *tail = ary
 
-	return acc if head.nil?
-
-	if head == prev
-		sub << head
+	if acc.empty? || acc.last[0] != head
+		acc << [ head ]
 	else
-		sub = [ head ]
-		prev = head
-		acc << sub
+		acc.last << head
 	end
 
-	pack(tail, acc, sub, head)
+	pack(tail, acc)
 end
 
 a = ['a', 'a', 'a', 'a', 'b', 'c', 'c', 'a', 'a', 'd', 'e', 'e', 'e', 'e']
