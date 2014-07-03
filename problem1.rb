@@ -10,7 +10,7 @@
 ###############################################################################
 def get_last(ary)
 	head, *tail = ary
-	return head if tail[0].nil?#tail.empty?
+	return head if tail.empty?
 
 	get_last(tail)
 end
