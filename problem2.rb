@@ -7,7 +7,7 @@
 ###############################################################################
 def get_penulitmate(ary)
 	head, *tail = ary
-	return head if tail[1].nil?
+	return head if tail.size == 1
 
 	get_penulitmate(tail)
 end
