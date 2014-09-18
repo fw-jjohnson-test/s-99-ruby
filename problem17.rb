@@ -22,3 +22,13 @@ puts split(list, 3)
 puts split(list, 6)
 # puts split([], 3) # test "cannot be empty" error
 # puts split(list, 0) # test "invalid index" error
+
+def split_duh(list, n)
+	raise ArgumentError.new("list cannot be empty") if list.empty?
+	raise ArgumentError.new("n must be greater than 0 and less than the length of the list.") if n == 0 or n >= list.length
+
+	{ :left => list[0...n], :right => list[n..-1] }
+end
+
+puts split_duh(list, 3)
+puts split_duh(list, 6)
