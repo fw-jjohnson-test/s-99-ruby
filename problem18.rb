@@ -25,4 +25,8 @@ def slice_list_duh(list, start, finish)
 	list[start...finish]
 end
 
-puts slice_list_duh(list, 3, 7)
+puts slice_list_duh(list, 3, 7).to_s
+
+
+# the one-liner way to solve this problem:
+puts 'a'.upto('k').to_a[3...7]
