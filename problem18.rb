@@ -9,6 +9,10 @@
 ###############################################################################
 
 def slice_list(list, start, finish)
+	raise ArgumentError.new("list cannot be empty.") if list.empty?
+	raise ArgumentError.new("start must be greater than 0 and less than the length of the list.") if start == 0 or start >= list.length
+	raise ArgumentError.new("finish must be greater than start and less than the length of the list.") if finish <= start or finish > list.length
+
 	list.map { |item| item if list.index(item) >= start and list.index(item) < finish  }
 		.compact
 end
