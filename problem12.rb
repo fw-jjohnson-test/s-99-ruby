@@ -22,6 +22,7 @@ def decode(ary, acc = [])
 	decode(tail, acc)
 end
 
+# TEST
 result = []
 a = [[4, "a"], "b", [2, "c"], [2, "a"], "d", [4, "e"]]
 decode(a, result)
